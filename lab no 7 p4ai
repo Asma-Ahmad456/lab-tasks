@@ -1,0 +1,202 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "b9f54e24-14da-47d6-ab0d-c930fd392bad",
+   "metadata": {},
+   "source": [
+    "task no 1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "186bf135-6007-412f-a037-71d7ada8538f",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "class student:\n",
+    "    def __init__(self,name,age,course):\n",
+    "        self.name=name\n",
+    "        self.age=age\n",
+    "        self.course=course\n",
+    "    def display(self):\n",
+    "        print(\"name=\",self.name)\n",
+    "        print(\"age =\",self.age)\n",
+    "        print(\"course =\",self.course)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "0ea18963-fa4e-476e-9209-71070069dd11",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "name= ahmad\n",
+      "age = 12\n",
+      "course = DSA\n"
+     ]
+    }
+   ],
+   "source": [
+    "s1=student(\"ahmad\",12,\"DSA\")\n",
+    "s1.display()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "152ab2a4-eabc-479f-95d8-f3e95ab78324",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "name= ayesha\n",
+      "age = 13\n",
+      "course = OOP\n"
+     ]
+    }
+   ],
+   "source": [
+    "s2=student(\"ayesha\",13,\"OOP\")\n",
+    "s2.display()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "ea099b6e-2406-41ae-83c7-1975234567c7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "class graduate(student):\n",
+    "    def __init__(self,name,age,course,research_topic):\n",
+    "         super().__init__(name,age,course)\n",
+    "         self.research_topic=research_topic\n",
+    "    def display1(self):\n",
+    "        super().display()\n",
+    "        print(\"res_topic\",self.research_topic)\n",
+    "        \n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "1515155c-f1d7-469a-93a3-a7f1055cf84b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "name= uzma\n",
+      "age = 12\n",
+      "course = P4AI\n",
+      "res_topic Functons\n"
+     ]
+    }
+   ],
+   "source": [
+    "g1=graduate(\"uzma\",12,\"P4AI\",\"Functons\")\n",
+    "g1.display1()\n",
+    "            "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "549a2ef0-a065-4824-9019-f56cc6ffbedd",
+   "metadata": {},
+   "source": [
+    "task no 2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "6f91387e-9c36-4c82-b683-52835616410e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "\n",
+    "class cash_payment:\n",
+    "    def pay():\n",
+    "        print(\"pay with cash \")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "4606a6bb-8495-4bf2-ad54-f25bec313185",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class card_payment(cash_payment):\n",
+    "    def pay():\n",
+    "        print(\"pay with card \")\n",
+    "        "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "99c6762e-878c-4e3b-8802-5067631ecb20",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "c1=cash_payment\n",
+    "cp1=card_payment"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "c2cfbf0c-3d0c-42d3-82cb-30fe8d6b062a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "pay with cash \n",
+      "pay with card \n"
+     ]
+    }
+   ],
+   "source": [
+    "lst=[c1,cp1]\n",
+    "for i in lst:\n",
+    "    i.pay()"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.9"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
